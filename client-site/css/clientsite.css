@@ -1,0 +1,728 @@
+body{
+    font-family: "bebas";
+    background: #EFF1F7;
+    margin: 0;
+    width: 100%;
+    background-color: white;
+}
+#container{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-areas:
+        "logo"
+        "tree"
+        "header"
+        "content"
+        "sidebar";
+    grid-template-columns: 1fr;
+    grid-template-rows: 0px 0px 200px auto;
+}
+
+/***** all pages *****/
+#header{
+    grid-area: header;
+    font-size: 1.8em;
+    line-height: 5px;
+    text-align: center;
+    color: white;
+    padding: 1.3em;
+    padding-top: 1.5em;
+}
+#header h6{
+    letter-spacing: 1px;
+    font-weight: 100;
+}
+#content{
+    grid-area: content;
+    background-image: url(../images/background.png);
+    background-size:auto;
+    padding: 1em;
+}
+#hero{
+    padding: 2em;
+    margin-bottom: 5em;
+    
+    text-align: center;
+    font-family: "calibri";
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+
+/***** sidebar *****/
+.logo{
+    grid-area: logo;
+    opacity: 0;
+    z-index: -1;
+}
+.sidebar{
+    grid-area: sidebar;
+    background-color: black;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+.tree{
+    grid-area: tree;
+    opacity: 0;
+    z-index: -1;
+}
+
+nav ul{
+    font-family: "calibri";
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+nav li{
+    display: inline-block;
+    width: 20%;
+}
+nav li a{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    padding: 1.5em 2em;
+    transition: 0.3s;
+    font-size: .8em;
+}
+nav li a:hover{
+    color: black;
+    background-color: white;
+}
+.current{
+    color: black;
+    background-color: white;
+}
+
+
+/***** home page *****/
+.homeheader{
+    background-image: url(../images/homeheader.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.herorow1{
+    flex-basis: 10%;
+    font-size: 2em;
+}
+.herorow2{
+    flex-basis: 90%;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.3em;
+}
+.herocol1{
+    flex-basis: 50%;
+    text-align: center;
+    padding: 0 2em;
+}
+.herocol2{
+    flex-basis: 50%;
+    text-align: center;
+    padding: 2em;
+}
+.herocol2 table{
+    text-align: left;
+    margin: 0 auto;
+}
+
+
+/***** menu page (HIBACHI) *****/
+.menuheader{
+    background-image: url(../images/menuheader.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#menuhero{
+    padding: 2em 1em;
+    text-align: center;
+    font-family: "calibri";
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+    
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10em;
+}
+/*** menu nav ***/
+.menunav{
+    width: 100%;
+    background-color: rgba(0,0,0,0.8);
+    position: fixed;
+    bottom: 3.6em;
+    
+    text-align: center;
+    font-family: "calibri";
+    font-size: .9em;
+}
+.menu a{
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    padding: .7em 0;
+    width: 50%;
+}
+.submenu a{
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    padding: .7em 0;
+    width: 33.33%;
+}
+.menunav a:hover{
+    background-color: #228b22;
+    color: white;
+}
+.currentmenu{
+    background-color: #228b22;
+}
+
+.sushisubmenu a{
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    font-size: .9em;
+    padding: .7em 0;
+    width: 12.5%;
+}
+/*** menu sections ***/
+.appetizerrow1{
+    border: 1px white solid;
+    padding: 0 1em;
+    padding-bottom: 2em;
+}
+.appetizerheader h1{
+    margin-top: 0;
+    font-size: 2.5em;
+}
+.siderow1{
+    border: 1px white solid;
+    padding: 0 1em;
+    padding-bottom: 2em;
+    margin-top: 0;
+}
+
+.entreerow1, .entreerow2, .entreerow3, .entreerow4, .entreerow5, .entreerow6{
+    border: 1px white solid;
+    padding: 0 1em;
+    padding-bottom: 2em;
+    margin-bottom: 2em;
+}
+.entreesubtext{
+    font-size: 1em;
+    font-weight: 100;
+    margin-top: .5em;
+    margin-bottom: 5em;
+}
+
+
+/***** menu page (SUSHI) *****/
+#menuhero h2{
+    font-size: 2.5em;
+    margin-top: 2em;
+    margin-bottom: .5em;
+}
+#menuhero h3{
+    font-size: 1.8em;
+    margin-top: 2em;
+    margin-bottom: 0;
+}
+#menuhero p{
+    font-size: 1.2em;
+    font-weight: 100;
+    margin-top: 0;
+    margin-bottom: .5em;
+}
+#menuhero h5{
+    font-size: 1.5em;
+    margin-top: 2em;
+    margin-bottom: 0;
+}
+
+.starterheader h1{
+    margin-top: 0;
+    font-size: 2.5em;
+}
+
+.starterrow1{
+    border: 1px white solid;
+    padding: 0 1em;
+    padding-bottom: 2em;
+}
+.sushientreerow1{
+    border: 1px white solid;
+    padding: 0 1em;
+    padding-bottom: 2em;
+}
+.dessertrow1{
+    border: 1px white solid;
+    padding: 0 1em;
+    padding-bottom: 2em;
+}
+.sashimirow1{
+    border: 1px white solid;
+    padding: 0 1em;
+    padding-bottom: 2em;
+}
+.specialrollrow1{
+    border: 1px white solid;
+    padding: 0 1em;
+    padding-bottom: 2em;
+}
+.makirow1{
+    border: 1px white solid;
+    padding: 0 1em;
+    padding-bottom: 2em;
+}
+.sushientreesrow1{
+    border: 1px white solid;
+    padding: 0 1em;
+    padding-bottom: 2em;
+}
+
+
+
+/***** about page *****/
+.aboutheader{
+    background-image: linear-gradient(to right, #00BAFF, #00FF6A)
+}
+.aboutcontent h3{
+    font-size: 2em;
+    margin-bottom: 0;
+    text-align: left;
+}
+.aboutcontent p{
+    font-family: "calibri";
+    font-size: 1.2em;
+    margin-top: .5em;
+    margin-bottom: 2.5em;
+    text-align: left;
+}
+
+
+/***** gallery page *****/
+#galleryhero{
+    padding: .7em;
+    margin-bottom: 5em;
+    
+    text-align: center;
+    font-family: "calibri";
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+    
+    display: flex;
+    flex-direction: column;
+}
+.galleryheader{
+    background-image: linear-gradient(to right, #FF9E15, #FF45C5)
+}
+.gallerycontainer{
+    display: block;
+}
+.gallerycontainer img{
+    width: 100%;
+}
+
+.galleryrow1{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: .5em;
+}
+.gallerycol1-1{
+    flex-basis: 50%;
+    margin-right: .25em;
+}
+.gallerycol1-2{
+    flex-basis: 50%;
+    margin-left: .25em;
+}
+
+.galleryrow2{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: .5em;
+}
+.gallerycol2-1{
+    flex-basis: 50%;
+    margin-right: .25em;
+}
+.gallerycol2-2{
+    flex-basis: 50%;
+    margin-left: .25em;
+}
+
+.galleryrow3{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: .5em;
+}
+.gallerycol3-1{
+    flex-basis: 50%;
+    margin-right: .25em;
+}
+.gallerycol3-2{
+    flex-basis: 50%;
+    margin-left: .25em;
+}
+
+.galleryrow4{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: .5em;
+}
+.gallerycol4-1{
+    flex-basis: 50%;
+    margin-right: .25em;
+}
+.gallerycol4-2{
+    flex-basis: 50%;
+    margin-left: .25em;
+}
+
+.galleryrow5{
+    display: flex;
+    flex-direction: row;
+}
+.gallerycol5-1{
+    flex-basis: 50%;
+    margin-right: .25em;
+}
+.gallerycol5-2{
+    flex-basis: 50%;
+    margin-left: .25em;
+}
+
+
+/***** contact page *****/
+.contactheader{
+    background-image: linear-gradient(to right, #004DAA, #2AE4FF)
+}
+.contacthero{
+    flex-basis: 10%;
+    font-size: 1em;
+}
+.contacthero h3{
+    font-size: 1.8em;
+    margin-bottom: .5em;
+}
+.contacthero h4{
+    font-size: 1.5em;
+    margin: 0 auto;
+    width: 150px;
+}
+.facebook, .instagram{
+    color: white;
+    display: block;
+    padding: .5em;
+}
+.facebook:hover, .instagram:hover{
+    color: black;
+    background-color: white;
+}
+
+
+
+
+
+
+
+/***** scale *****/
+@media (min-width: 1040px){
+    #container{
+        grid-template-areas:
+            "logo header"
+            "sidebar content"
+            "tree content";
+        grid-template-columns: 200px auto;
+        grid-template-rows: 219px;
+    }
+    
+    /***** all pages *****/
+    #header{
+    font-size: 2.8em;
+    line-height: 5px;
+    padding: .8em;
+    }
+    #header h6{
+        letter-spacing: 2px;
+    }
+    #content{
+        padding: 1.9em;
+    }
+    
+    
+    /***** sidebar *****/
+    .logo{
+        position: fixed;
+        width: 200px;
+        height: 200px;
+        text-align: center;
+        opacity: 1;
+        background-color: black;
+    }
+    .logopng{
+        position: absolute;
+        width: 150px;
+        top: 20%;
+        left: 12.5%;
+    }
+    .sidebar{
+        position: fixed;
+        width: 200px;
+        top: 200px;
+    }
+    .tree{
+        position: fixed;
+        bottom: 0%;
+        width: 200px;
+        height: 200px;
+        text-align: center;
+        opacity: 1;
+        z-index: 1;
+        background-color: black;
+    }
+    .treepng{
+        position: absolute;
+        width: 120px;
+        top: 27.5%;
+        left: 20%;
+    }
+    
+    nav ul{
+        font-family: "calibri";
+        padding: 1.2em 0;
+        margin: 0;
+    }
+    nav li{
+        width: 100%;
+    }
+    nav li a{
+        text-decoration: none;
+        color: white;
+        padding: 1em 2em;
+    }
+    nav li a:hover{
+        color: black;
+        background-color: white;
+        opacity: 1;
+    }
+    .current{
+        color: black;
+        background-color: white;
+        opacity: 1;
+    }
+    
+    
+    /***** home page *****/
+    .herorow1{
+        flex-basis: 10%;
+        font-size: 2.5em;
+    }
+    .herorow2{
+        flex-basis: 90%;
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 2em;
+        font-size: 1.2em;
+    }
+    .herocol1{
+        flex-basis: 50%;
+        text-align: right;
+        padding: 0 4em;
+    }
+    .herocol2{
+        flex-basis: 50%;
+        text-align: left;
+        padding: 0 4em;
+    }
+    .herocol1 h3, .herocol2 h3{
+        font-size: 1.5em;
+    }
+    .herocol2 table, .herocol1 p{
+        margin: 0;
+    }
+    
+    
+    /***** menu page (HIBACHI) *****/
+    .menunav{
+        position: fixed;
+        left: 200px;
+        width: 85.5%;
+        bottom: 0;
+    }
+    /*** appetizers ***/
+    .appetizerrow1, .siderow1{
+        display: flex;
+        flex-direction: row;
+        text-align: left;
+    }
+    .appetizercol1, .sidecol1, .appetizercol2, .sidecol2{
+        padding-right: 2em;
+        flex-basis: 50%;
+    }
+    /*** entrees ***/
+    .entreeallrows{
+        text-align: left;
+    }
+    .entreeallrows h3{
+        font-size: 1.5em;
+    }
+    .entreeallrows h5{
+        font-size: 1em;
+    }
+    .entreeallrows p{
+        font-size: .7em;
+    }
+    .entreesubtext{
+        font-size: .6em;
+        margin-bottom: 4em;
+    }
+    .entreerow6{
+        margin-bottom: 0;
+}
+    .appetizerrow1, .siderow1, .entreerow1, .entreerow2, .entreerow3, .entreerow4, .entreerow5, .entreerow6{
+        border: 1px white solid;
+        padding: 0 3em;
+        padding-bottom: 2em;
+        margin-bottom: 2em;
+}
+    .entreesubtext{
+        font-size: 1em;
+    }
+    
+    /***** gallery page *****/
+    #galleryhero{
+    padding: 2em;
+}
+    
+    .galleryrow1{
+    margin-bottom: 1em;
+    }
+    .gallerycol1-1{
+        margin-right: .5em;
+    }
+    .gallerycol1-2{
+        margin-left: .5em;
+    }
+
+    .galleryrow2{
+        margin-bottom: 1em;
+    }
+    .gallerycol2-1{
+        margin-right: .5em;
+    }
+    .gallerycol2-2{
+        margin-left: .5em;
+    }
+
+    .galleryrow3{
+        margin-bottom: 1em;
+    }
+    .gallerycol3-1{
+        margin-right: .5em;
+    }
+    .gallerycol3-2{
+        margin-left: .5em;
+    }
+
+    .galleryrow4{
+        margin-bottom: 1em;
+    }
+    .gallerycol4-1{
+        margin-right: .5em;
+    }
+    .gallerycol4-2{
+        margin-left: .5em;
+    }
+
+    .gallerycol5-1{
+        margin-right: .5em;
+    }
+    .gallerycol5-2{
+        margin-left: .5em;
+    }
+    
+    
+    /***** contact page *****/
+    .contacthero h3{
+        font-size: 1.8em;
+        margin-top: 0;
+        margin-bottom: .5em;
+    }
+}
+
+
+
+
+
+
+/***** scale *****/
+@media (max-width: 600px){
+    #header{
+        font-size: 1.8em;
+    }
+    nav li{
+        font-size: 1em;
+        display: inline-block;
+        width: 20%;
+    }
+    .herorow1{
+        font-size: 2em;
+    }
+    .herorow2{
+        font-size: 1.5em;
+    }
+
+    .menunav{
+        font-size: .9em;
+        bottom: 3.6em;
+    }
+
+    
+    .appetizerheader h1{
+        font-size: 2.3em;
+    }
+    .starterheader h1{
+        font-size: 2.3em;
+    }
+    .entreesubtext{
+        font-size: 1em;
+    }
+    #menuhero h5{
+        font-size: 1.5em;
+    }
+    #menuhero h3{
+        font-size: 1.7em;
+    }
+    #menuhero p{
+        font-size: 1.2em;
+    }
+    
+    .aboutcontent p{
+        font-size: 1.2em;
+    }
+    .aboutcontent h3{
+        font-size: 1.5em;
+    }
+    
+    
+    .contacthero h3{
+        font-size: 1.8em;
+    }
+    .contacthero h4{
+        font-size: 1.3em;
+    }
+}
+
+
+
+

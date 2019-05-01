@@ -1,0 +1,1064 @@
+body{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-family: "Century Gothic";
+    background-image: url("../images/background(mobile).png");
+}
+.background{
+    display: none;
+}
+
+
+/***** all pages *****/
+.grid-container{
+    display: grid;
+    grid-template-areas: 
+        "header"
+        "main"
+        "footer";
+    height: 100vh;
+    grid-template-columns: auto;
+    grid-template-rows: 200px auto 100px;
+}
+.header, .sidebar, .main, .footer{
+    padding: 1em;
+}
+
+.header{
+    grid-area: header;
+    padding: 0 1em;
+    text-align: center;
+}
+.main{
+    grid-area: main;
+    padding: 0;
+}
+.footer{
+    grid-area: footer;
+    background-color: #F4F4F4;
+    text-align: center;
+    margin-bottom: 33px;
+}
+.sidebar{
+    grid-area: sidebar;
+    position: fixed;
+    background-color: white;
+    
+    width: 100%;
+    bottom: 0;
+    padding: 0;
+}
+
+.footer img{
+    width: 2em;
+    transition: .1s ease-in-out;
+    margin: 0 .5em;
+}
+.footer img:hover{
+    transform: scale(1.2);
+}
+
+
+/***** sidebar *****/
+.sidebar ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.sidebar li{
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    width: 16.66%;
+}
+.mainli a:link{
+    text-decoration: none;
+    display: block;
+    font-size: .8em;
+    padding: 1em;
+    transition: 0.2s;
+}
+.sidebar a:hover{
+    background-color: white;
+}
+
+.home, .about, .resume, .portfolio, .client, .exercise{
+    color: #2B2B2B;
+}
+.currenthome{
+    background-color: #0092FF;
+    color: white;
+}
+.currentabout{
+    background-color: #00FFFF;
+    color: white;
+}
+.currentresume{
+    background-color: #FF5A5A;
+    color: white;
+}
+.currentportfolio{
+    background-color: #FFB600;
+    color: white;
+}
+.currentclient{
+    background-color: #00FF24;
+    color: white;
+}
+.currentexercise{
+    background-color: #F800FF;
+    color: white;
+}
+a.home:hover{
+    background-color: #0092FF;
+    color: white;
+    transition: 0.3s;
+}
+a.about:hover{
+    background-color: #00FFFF;
+    color: white;
+    transition: 0.3s;
+}
+a.resume:hover{
+    background-color: #FF5A5A;
+    color: white;
+    transition: 0.3s;
+}
+a.portfolio:hover{
+    background-color: #FFB600;
+    color: white;
+    transition: 0.3s;
+}
+a.client:hover{
+    background-color: #00FF24;
+    color: white;
+    transition: 0.3s;
+}
+a.exercise:hover{
+    background-color: #F800FF;
+    color: white;
+    transition: 0.3s;
+}
+
+
+/***** home page *****/
+.homeheading{
+    color: #2B2B2B;
+    font-size: 3.5em;
+    margin-top: .8em;
+    margin-bottom: 0;
+}
+.homesubheading{
+    color: #0092FF;
+    font-size: 2em;
+    font-weight: normal;
+    margin-top: .2em;
+    margin-bottom: 0;
+}
+.quoteblock{
+    color: #2B2B2B;
+    font-size: 1.2em;
+    text-align: left;
+    margin: 0 auto;
+    width: 300px;
+    font-weight: bold;
+    margin-top: 4em;
+}
+.quote{
+    color: #5C6370;
+    line-height: 1.5em;
+}
+.wg{
+    margin-top: 1.5em;
+    margin-bottom: .5em;
+}
+.quoteunderline{
+    background-color: #0092FF;
+    width: 50px;
+    height: 6px;
+    animation-name: quoteunderline;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+}
+@keyframes quoteunderline{
+    0% {width: 0px; opacity: 0;}
+    100% {width: 50px; opacity: 1;}
+}
+
+
+/***** about page *****/
+.aboutheading{
+    display: inline-block;
+    font-size: 4.5em;
+    margin-top: .8em;
+    margin-bottom: 0;
+}
+.period{
+    background-color: #00FFFF;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    
+    animation-name: period;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+}
+@keyframes period{ 
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 
+    40% {transform: translateY(-15px);} 
+    60% {transform: translateY(-5px);}
+}
+.aboutmain{
+    margin: 0 2.5em;
+    margin-bottom: 5em;
+    line-height: 30px;
+}
+
+
+/***** resume page *****/
+.resumeheading{
+    font-size: 4.5em;
+    margin-top: .8em;
+    margin-bottom: 0;
+}
+.resumehighlight{
+    display: inline-block;
+    background-color: #FF5A5A;
+    width: 270px;
+    height: 45px;
+    z-index: -1;
+    position: relative;
+    bottom: 3em;
+    left: .5em;
+    
+    animation-name: resumehighlight;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+}
+@keyframes resumehighlight{
+    0% {width: 0px; opacity: 0;}
+    100% {width: 270px; opacity: 1;}
+}
+.resumesubheading1{
+    font-size: 2.5em;
+    margin-bottom: 0;
+    text-align: center;
+}
+.resumesubheading2{
+    font-size: 1em;
+    margin-top: .5em;
+    text-align: center;
+    line-height: 1.5em;
+}
+.resumeheading3{
+    color: #FF5A5A;
+    font-size: 1.3em;
+}
+
+.contentcontainer{
+    margin: 0 2.5em;
+    height: 2000px;
+    font-size: .8em;
+}
+.contentcontainer p{
+    margin-top: 0;
+}
+.educationcontainer{
+    background-color: #F8F8FF;
+    padding: 8%;
+    margin-bottom: 3%;
+    line-height: 1.5em;
+}
+.skillscontainer{
+    background-color: #F4F4FC;
+    padding: 8%;
+    margin-bottom: 3%;
+    line-height: 1.5em;
+}
+.skillcol1{
+    width: 45%;
+    list-style: none;
+    padding: 0;
+    display: inline-block;
+}
+.skillcol2{
+    width: 45%;
+    list-style: none;
+    padding: 0;
+    padding-left: 5%;
+    display: inline-block;
+}
+.experiencecontainer{
+    background-color: #F4F4FC;
+    padding: 8%;
+    margin-bottom: 3%;
+    line-height: 1.5em;
+}
+.date{
+    margin-bottom: 0;
+    font-size: .8em;
+}
+.jobtitle{
+    color: #FF5A5A;
+    font-size: 1em;
+}
+.experienceul{
+    list-style: none;
+    line-height: 2em;
+}
+.experienceul li::before{
+    content: "\2022";
+    color: #FF5A5A;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+.activitiescontainer{
+    background-color: #F4F4FC;
+    padding: 8%;
+}
+
+
+/***** portfolio page *****/
+.portfolioheading{
+    font-size: 4.5em;
+    margin-top: .8em;
+    margin-bottom: 0;
+    display: inline-block;
+}
+.portfoliounderline{
+    display: inline-block;
+    background-color: #FFB600;
+    width: 35px;
+    height: 5px;
+    
+    animation-name: underline;
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+}
+@keyframes underline{
+    0% {opacity: 0;}
+    50% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+.webdesignheading{
+    text-align: center;
+    font-size: 2em;
+    margin-top: 0;
+    margin-bottom: 1em;
+}
+.webdesigncontainer{
+    margin-bottom: 20%;
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+}
+.webdesigncontent{
+    line-height: 2em;
+    font-size: 1em;
+}
+.ibmheading{
+    font-size: 1.5em;
+    color: #3BA9F4;
+}
+.row1{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10%;
+    background-color: white;
+}
+.col1{
+    flex-basis: 60%;
+}
+.col2{
+    text-align: center;
+    flex-basis: 40%;
+    display: flex;
+    flex-direction: column;
+}
+.ibmpng{
+    width: 100%;
+}
+
+.signupheading{
+    font-size: 1.5em;
+    color: #9AD761;
+}
+.row2{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10%;
+    background-color: white;
+
+}
+.col1-2{
+    flex-basis: 60%;
+}
+.col2-2{
+    flex-basis: 40%;
+    flex-direction: column;
+    display: flex;
+    text-align: center;
+}
+.signuppng{
+    width: 100%;
+}
+
+.checkoutheading{
+    font-size: 1.5em;
+    color: #31619B;
+}
+.row3{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10%;
+    background-color: white;
+}
+.col1-3{
+    flex-basis: 60%;
+}
+.col2-3{
+    flex-basis: 40%;
+    flex-direction: column;
+    display: flex;
+    text-align: center;
+}
+.checkoutpng{
+    width: 100%;
+}
+
+.gotenheading{
+    font-size: 1.5em;
+    color: black;
+}
+.row4{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20%;
+    background-color: white;
+}
+.col1-4{
+    flex-basis: 60%;
+}
+.col2-4{
+    flex-basis: 40%;
+    flex-direction: column;
+    display: flex;
+    text-align: center;
+}
+.gotenpng{
+    width: 100%;
+}
+
+.appheading{
+    font-size: 2.5em;
+    color: #6FD86F;
+    text-align: center;
+}
+.appcontainer{
+    margin: 0 auto;
+    margin-bottom: 20%;
+    width: 90%;
+    display: block;
+}
+.row5{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20%;
+}
+.col1-5{
+    flex-basis: 70%;
+}
+.col2-5{
+    flex-basis: 30%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: white;
+    line-height: 2em;
+}
+.apppng{
+    width: 100%;
+}
+
+.logoheading{
+    text-align: center;
+    font-size: 2.5em;
+}
+.logocontainer{
+    width: 100%;
+    display: block;
+    margin-bottom: 20%;
+}
+.logopng{
+    width: 100%;
+}
+.row6{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 0 auto;
+}
+.col1-6{
+    flex-basis: 25%;
+}
+.col2-6{
+    flex-basis: 25%;
+}
+.col3-6{
+    flex-basis: 25%;
+}
+.col4-6{
+    flex-basis: 25%;
+}
+
+.row7{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 0 auto;
+}
+.col1-7{
+    flex-basis: 25%;
+}
+.col2-7{
+    flex-basis: 25%;
+}
+.col3-7{
+    flex-basis: 25%;
+}
+.col4-7{
+    flex-basis: 25%;
+}
+
+.row8{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.col1-8{
+    flex-basis: 25%;
+}
+.col2-8{
+    flex-basis: 25%;
+}
+.col3-8{
+    flex-basis: 25%;
+}
+.col4-8{
+    flex-basis: 25%;
+}
+
+.row9{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.col1-9{
+    flex-basis: 25%;
+}
+.col2-9{
+    flex-basis: 25%;
+}
+.col3-9{
+    flex-basis: 25%;
+}
+.col4-9{
+    flex-basis: 25%;
+}
+
+.row10{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.col1-10{
+    flex-basis: 25%;
+}
+.col2-10{
+    flex-basis: 25%;
+}
+.col3-10{
+    flex-basis: 25%;
+}
+.col4-10{
+    flex-basis: 25%;
+}
+
+
+/***** exercise page *****/
+.exerciseheading{
+    font-size: 3.5em;
+    margin-top: .8em;
+    margin-bottom: 0;
+}
+.exercisesubheading{
+    font-size: 2em;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
+}
+.exerciseunderline{
+    width: 225px;
+    height: 6px;
+    background-color: #F800FF;
+    margin: 0 auto;
+    margin-bottom: 10%;
+    
+    animation-name: exerciseunderline;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+}
+@keyframes exerciseunderline{
+    0% {width: 0px; opacity: 0;}
+    100% {width: 225px; opacity: 1;}
+}
+
+a.exercisea:visited{
+    color: #313849;
+}
+a.exercisea:link{
+    color: #313849;
+    text-decoration: none;
+    padding: 2em;
+    display: block;
+}
+a.exercisea:hover{
+    color: white;
+    background-color: #F800FF;
+    transition: 0.3s;
+    display: block;
+}
+.exerciselist{
+    margin-bottom: 5em;
+}
+ul.exerciseul{
+    font-size: 1em;
+    text-align: left;
+    list-style-type: none;
+    margin-left: 15%;
+    padding: 0px;
+    width: 80%;
+    background-color: #F4F4FC;
+    margin: 0 auto;
+}
+
+
+
+
+@media (min-width: 900px){
+    .grid-container{
+        display: grid;
+        grid-template-areas: 
+            "header sidebar"
+            "main sidebar"
+            "footer footer";
+        height: 100vh;
+        grid-template-columns: auto 120px;
+        grid-template-rows: 250px auto 70px;
+    }
+    
+    /***** all pages *****/
+    .background{
+        display: block;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        opacity: .5;
+        z-index: -1;
+    }
+    .backgroundgray1{
+        position: relative;
+        width: 13%;
+        height: 8.33%;
+        border-radius: 50px;
+        background-color: #313849;
+        margin-left: 70%;
+
+        animation-name: background;
+        animation-duration: 3s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+}
+    .backgroundgray2{
+        position: relative;
+        width: 13%;
+        height: 8.33%;
+        border-radius: 50px;
+        background-color: #313849;
+        margin-left: 66%;
+
+        animation-name: background;
+        animation-duration: 2.8s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+}
+    .backgroundgray3{
+        position: relative;
+        width: 13%;
+        height: 8.33%;
+        border-radius: 50px;
+        background-color: #313849;
+        margin-left: 68%;
+
+        animation-name: background;
+        animation-duration: 2.6s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+}
+    .backgroundblue{
+        position: relative;
+        width: 13%;
+        height: 8.33%;
+        border-radius: 50px;
+        background-color: #0092FF;
+        margin-left: 71%;
+
+        animation-name: background;
+        animation-duration: 2.2s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+}
+    .backgroundteal{
+        position: relative;
+        width: 13%;
+        height: 8.33%;
+        border-radius: 50px;
+        background-color: #00FFFF;
+        margin-left: 68%;
+
+        animation-name: background;
+        animation-duration: 2s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+}
+    .backgroundred{
+        position: relative;
+        width: 13%;
+        height: 8.33%;
+        border-radius: 50px;
+        background-color: #FF5A5A;
+        margin-left: 72%;
+
+        animation-name: background;
+        animation-duration: 2.2s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+}
+    .backgroundorange{
+        position: relative;
+        width: 13%;
+        height: 8.33%;
+        border-radius: 50px;
+        background-color: #FFB600;
+        margin-left: 70%;
+
+        animation-name: background;
+        animation-duration: 2.4s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+}
+    .backgroundgreen{
+        position: relative;
+        width: 13%;
+        height: 8.33%;
+        border-radius: 50px;
+        background-color: #00FF24;
+        margin-left: 67%;
+
+        animation-name: background;
+        animation-duration: 2.6s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+}
+    .backgroundpurple{
+        position: relative;
+        width: 13%;
+        height: 8.33%;
+        border-radius: 50px;
+        background-color: #F800FF;
+        margin-left: 67%;
+
+        animation-name: background;
+        animation-duration: 2.8s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+}
+    .backgroundgray4{
+        position: relative;
+        width: 13%;
+        height: 8.33%;
+        border-radius: 50px;
+        background-color: #313849;
+        margin-left: 71%;
+
+        animation-name: background;
+        animation-duration: 3s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+}
+    .backgroundgray5{
+        position: relative;
+        width: 13%;
+        height: 8.33%;
+        border-radius: 50px;
+        background-color: #313849;
+        margin-left: 69%;
+
+        animation-name: background;
+        animation-duration: 2.8s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+}
+    .backgroundgray6{
+        position: relative;
+        width: 13%;
+        height: 8.33%;
+        border-radius: 50px;
+        background-color: #313849;
+        margin-left: 73%;
+
+        animation-name: background;
+        animation-duration: 2.6s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+}
+    @keyframes background{
+        0% {left: 0px;}
+        25% {left: 15px;}
+        50% {left: 0px;}
+        75% {left: -15px;}
+        100% {left: 0px;}
+    }
+
+    .header{
+        text-align: left;
+        padding: 0 15%;
+        padding-top: 5%;
+    }
+    .main{
+        padding: 0 15%;
+        padding-right: 4em;
+        padding-top: 2em;
+    }
+    .footer{
+        padding: 1.2em 0;
+        z-index: 1;
+        margin: 0;
+    }
+    
+    
+    /***** sidebar *****/
+    .sidebar{
+        position: fixed;
+        height: 100%;
+        width: 8%;
+        background: none;
+        right: 0;
+    }
+    .sidebar ul{
+        margin: 10.5em 0;
+    }
+    .sidebar li{
+        width: 100%;
+    }
+    .mainli a:link{
+        padding: 1.56em;
+        border-top-left-radius: 50px;
+        border-bottom-left-radius: 50px;
+    }
+    
+    
+    /***** home page *****/
+    .homeheading{
+        font-size: 5em;
+    }
+    .homesubheading{
+        font-size: 3em;
+    }
+    .quoteblock{
+        margin: 0;
+        margin-top: 8%;
+    }
+    
+    
+    /***** about page *****/
+    .aboutheading{
+        font-size: 5em;
+    }
+    .aboutmain{
+        margin: 0;
+        margin-bottom: 10%;
+        width: 60%;
+    }
+    .period{
+        width: 15px;
+        height: 15px;
+    }
+    
+    
+    /***** resume page *****/
+    .resumeheading{
+        font-size: 5em;
+    }
+    .resumehighlight{
+        display: inline-block;
+        width: 300px;
+        left: .8em;
+    }
+    @keyframes resumehighlight{
+        0% {width: 0px; opacity: 0;}
+        100% {width: 300px; opacity: 1;}
+    }
+    .resumesubheading1{
+        text-align: left;
+        margin-top: 0;
+    }
+    .resumesubheading2{
+        text-align: left;
+    }
+    .contentcontainer{
+        margin: 0;
+        width: 100%;
+        font-size: 1em;
+        height: 2500px;
+    }
+    
+    
+    /***** portfolio page *****/
+    .portfolioheading{
+        font-size: 5em;
+    }
+    .webdesignheading{
+        font-size: 2.5em;
+        margin-top: 0;
+        margin-bottom: 1em;
+        text-align: left;
+    }
+    .webdesigncontainer{
+        width: 100%;
+    }
+    .ibmheading{
+        font-size: 2em;
+}
+    .row1{
+        flex-direction: row;
+    }
+    .col2{
+        text-align: left;
+        padding: 0 2em;
+        justify-content: center;
+    }
+
+    .signupheading{
+        font-size: 2em;
+}
+    .row2{
+        flex-direction: row;
+    }
+    .col1-2{
+        order: 2;
+    }
+    .col2-2{
+        justify-content: center;
+        padding: 0 2em;
+        text-align: right;
+}
+    .signuppng{
+        width: 100%;
+}
+
+    .checkoutheading{
+        font-size: 2em;
+}
+    .row3{
+        flex-direction: row;
+    }
+    .col2-3{
+        justify-content: center;
+        padding: 0 2em;
+        text-align: left;
+}
+    .checkoutpng{
+        width: 100%;
+}
+
+    .gotenheading{
+        font-size: 2em;
+    }
+    .row4{
+        flex-direction: row;
+    }
+    .col1-4{
+        order: 2;
+    }
+    .col2-4{
+        justify-content: center;
+        padding: 0 2em;
+        text-align: right;
+}
+    .gotenpng{
+        width: 100%;
+}
+
+    .appheading{
+        font-size: 2.5em;
+        color: #6FD86F;
+}
+    .appcontainer{
+        margin-bottom: 20%;
+        width: 100%;
+    }
+    .row5{
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 20%;
+}
+    .col1-5{
+        flex-basis: 70%;
+}
+    .col2-5{
+        flex-basis: 30%;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        padding: 0 2em;
+        text-align: left;
+        background-color: white;
+        line-height: 2em;
+        font-size: 15px;
+}
+    .apppng{
+        width: 100%;
+}
+
+    .logoheading{
+        text-align: center;
+        font-size: 2.5em;
+}
+    
+    /***** exercise page *****/
+    .exercisesubheading{
+        font-size: 2.5em;
+        text-align: left;
+    }
+    .exerciseunderline{
+        width: 70px;
+        height: 8px;
+        margin: 0;
+        margin-bottom: 10%;
+    }
+    @keyframes exerciseunderline{
+        0% {width: 0px; opacity: 0;}
+        100% {width: 70px; opacity: 1;}
+    }
+    ul.exerciseul{
+        margin: 0;
+        width: 60%;
+    }
+}

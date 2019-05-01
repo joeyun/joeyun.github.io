@@ -1,0 +1,44 @@
+body{
+    font-family: 'Questrial', sans-serif;
+    background-color: #ff6f69;
+    padding-bottom: 100px;
+    background-image: linear-gradient(to bottom right, #4EC2FF, #E44EFF);
+}
+h1{
+    text-align: center;
+    margin-top: 75px;
+    margin-bottom: 75px;
+    color: white;
+    font-size: 40px;
+}
+ul{
+    list-style-type: none;
+    margin: auto;
+    padding: 0;
+    width: 50%;
+    text-align: center;
+}
+li{
+    display: block;
+    color: #000;
+    text-decoration: none;
+    background-color: white;
+}
+a{
+    display: block;
+    color: #4EC2FF;
+    padding: 20px;
+    text-decoration: none;
+    
+}
+a:hover{
+    background-color: #4EC2FF;
+    color: white;
+}
+a.active{
+    background-color: #F96765;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+

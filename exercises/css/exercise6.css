@@ -1,0 +1,37 @@
+body{
+    font-family: Arial;
+    background-color: #8FE6FF;
+    }
+h1{
+    color: #FFFFFF;
+    background-color: #576471;
+    padding: 20px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-family: 'Amatic SC', cursive;
+    }
+h2{
+    color: #FFFFFF;
+    background-color: #467BA1;
+    padding: 10px;
+}
+p{
+    padding-left: 20px;
+    padding-right: 20px;
+    line-height: 1.6em;
+    font-family: "Courier New", Courier, monospace;
+    }
+a:link{
+    color: #2C98E9;
+    text-decoration: none;
+}
+a:visited{
+    color: #2C98E9;
+}
+a:hover{
+    color: #C70039;
+    text-decoration: underline;
+}
+a:active{
+    color: darkcyan;
+}
